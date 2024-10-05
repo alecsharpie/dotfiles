@@ -30,3 +30,6 @@ if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/
 
 # GCP SDK- Enable shell command completion
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+
+# direnv
+eval "$(direnv hook zsh)"
