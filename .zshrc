@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 # see all themes at https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell" # "dstufft"
 
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent direnv)
+plugins=(git gitfast common-aliases zsh-syntax-highlighting history-substring-search ssh-agent direnv)
 
 # turn off Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
@@ -14,12 +14,6 @@ ZSH_DISABLE_COMPFIX=true
 # Load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
-
-# Pyenv shims
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # https://github.com/pyenv/pyenv-virtualenv/issues/135
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
