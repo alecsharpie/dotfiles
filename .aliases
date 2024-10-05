@@ -1,0 +1,1 @@
+alias raspberrypi='ssh pi@raspberrypi.local'
