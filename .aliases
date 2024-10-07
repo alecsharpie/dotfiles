@@ -1,2 +1,15 @@
 alias raspberrypi='ssh pi@raspberrypi.local'
+alias myip="curl https://ipinfo.io/json"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias weather="curl -s 'wttr.in/Melbourne?QF' | tail -n +6"
+
 alias python='uv run python'
+
+alias gpoh="git push origin HEAD"
+alias gplog="git log --oneline --decorate --graph"
+alias g1="git rev-parse HEAD"
+alias gsweep="git branch --merged main | grep -v '\* main' | xargs -n 1 git branch -d"
+alias gundo="git reset --soft HEAD~1"
+alias gfomo="git checkout main && git pull origin main"
+alias gpr="gh pr create -d --base main --fill"
+alias gpropen='open -a "Google Chrome" $(gh pr view --json url | jq -r .url)'
