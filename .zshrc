@@ -33,3 +33,6 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-clou
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# uv shell completion
+echo 'eval "$(uv generate-shell-completion zsh)"'
